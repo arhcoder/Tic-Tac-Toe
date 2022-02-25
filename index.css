@@ -62,7 +62,7 @@ body
 {
     width: 4vh;
     height: 4vh;
-    margin-left: 0.88vh;
+    margin-left: 0.44vh;
 }
 
 .bottom-panel
@@ -90,13 +90,13 @@ body
     text-align: center;
     text-align: start;
 }
-#score-X
+#score-x-box
 {
     display: flex;
     justify-content: flex-end;
     align-items: center;
 }
-#score-O
+#score-o-box
 {
     display: flex;
     justify-content: flex-start;
@@ -107,13 +107,13 @@ body
     width: 4.44vh;
     height: 4.44vh;
 }
-#X
+#x
 {
-    margin: 0 0.44vh 0 2vh;
+    margin: 0 2.44vh 0 0.44vh;
 }
-#O
+#o
 {
-    margin: 0 2vh 0 0.44vh;
+    margin: 0 0.44vh 0 2.44vh;
 }
 .scores h2
 {

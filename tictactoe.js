@@ -1,8 +1,5 @@
 // Variables globales //
 var playerOneTurn = true;
-const xIconPath = "https://img.icons8.com/stickers/50/000000/x.png";
-const oIconPath = "https://img.icons8.com/stickers/50/000000/o.png";
-const emptySpace = "";
 
 function playerClick(clicked_class, clicked_id)
 {
@@ -13,13 +10,13 @@ function playerClick(clicked_class, clicked_id)
         if (playerOneTurn)
         {
             // Se dibuja la imágen X y se cambia de turno.
-            document.querySelector("img[name=" + clicked_id + "]").src = xIconPath;
+            document.querySelector("img[name=" + clicked_id + "]").src = "/x.svg";
             playerOneTurn = !playerOneTurn;
         }
         else
         {
             // Se dibuja la imágen O y se cambia de turno.
-            document.querySelector("img[name=" + clicked_id + "]").src = oIconPath;
+            document.querySelector("img[name=" + clicked_id + "]").src = "/o.svg";
             playerOneTurn = !playerOneTurn;
         }
         
@@ -33,6 +30,6 @@ function reset()
     for (let i = 1; i <= 9; i++)
     {
         document.getElementById("box" + i).className = "box-empty";
-        document.querySelector("img[name=icon" + i  + "]").src = "";
+        document.querySelector("img[name=icon" + i  + "]").src = "/void.svg";
     }
 }
