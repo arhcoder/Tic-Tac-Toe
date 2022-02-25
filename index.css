@@ -8,7 +8,7 @@ body
 {
     width: 100vw;
     height: 100vh;
-    background: #141E28
+    background: #141E28;
 }
 
 .top-panel
@@ -26,22 +26,43 @@ body
 
 .titular
 {
-    width: 34vh;
-    height: 24%;
-    margin: 2%;
+    width: 50vh;
+    height: 30%;
+    margin-bottom: 4vh;
     border-radius: 14px;
     text-align: center;
 }
-
-.player
+.titular h1
 {
-    width: 34vh;
-    height: 20%;
-    margin: 2%;
+    font-family: "Anton", sans-serif;
+    font-size: 5.4vh;
+    font-weight: 100;
+    color: #FFF;
+}
+
+.player-turn
+{
+    display: flex;
+    align-items: center;
+    width: 30vh;
+    padding: 2.22vh;
     background: #203238;
     border-radius: 14px;
-    text-align: center;
     text-align: start;
+}
+.player-turn h2
+{
+    font-family: "Rubik", sans-serif;
+    font-size: 2.88vh;
+    font-weight: 300;
+    color: #BBC;
+    margin-left: 1vh;
+}
+.turn
+{
+    width: 4vh;
+    height: 4vh;
+    margin-left: 0.88vh;
 }
 
 .bottom-panel
@@ -59,19 +80,53 @@ body
 
 .scores
 {
-    width: 34vh;
-    height: 80%;
-    margin: 2%;
+    display: grid;
+    grid-template-columns: repeat(2, 2fr);
+
+    width: 30vh;
+    padding: 2.22vh;
     background: #203238;
     border-radius: 14px;
     text-align: center;
     text-align: start;
 }
+#score-X
+{
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+}
+#score-O
+{
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+}
+.score-icon
+{
+    width: 4.44vh;
+    height: 4.44vh;
+}
+#X
+{
+    margin: 0 0.44vh 0 2vh;
+}
+#O
+{
+    margin: 0 2vh 0 0.44vh;
+}
+.scores h2
+{
+    font-family: "Rubik", sans-serif;
+    font-size: 2.8vh;
+    font-weight: 300;
+    color: #BBC;
+}
 
 .reset-button
 {
-    margin: 2%;
-    padding: 1.6% 1.8%;
+    padding: 2vh;
+    margin-top: 4vh;
     border-radius: 14px;
     font-size: 16px;
     font-weight: 800;

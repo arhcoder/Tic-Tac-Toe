@@ -4,10 +4,16 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    
     <!--| Estilos CSS |-->
     <link rel="stylesheet" href="/index.css">
     <link rel="stylesheet" href="/tictactoe.css">
+    <!-- | Fuentes | -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Anton&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Rubik&display=swap" rel="stylesheet">
     <!--| Scripts |-->
     <script src="tictactoe.js"></script>
     <!--| Favicon |-->
@@ -16,8 +22,8 @@
 </head>
 <body>
     <div class="top-panel">
-        <div class="titular"><H1>¡TIC TAC TOE!</H1></div>
-        <div class="player"><h2>TURNO DEL JUGADOR: X</h2></div>
+        <div class="titular"><h1>¡TIC TAC TOE!</h1></div>
+        <div class="player-turn"><h2>Turno de</h2><img src="https://img.icons8.com/stickers/50/000000/x.png" class="turn" alt="x"></div>
     </div>
     <div class="content">
         <div class="tictactoe">
@@ -33,8 +39,13 @@
         </div>
     </div>
     <div class="bottom-panel">
-        <div class="score">
-            <div class="scores"><h2>X: 10</h2><br><h2>O: 8</h2></div>
+        <div class="scores">
+            <div id="score-X">
+                <h2 id="x-score">0</h2><img src="https://img.icons8.com/stickers/50/000000/x.png" class="score-icon" id="X"></img src="https://img.icons8.com/stickers/50/000000/x.png">
+            </div>
+            <div id="score-O">
+                <img src="https://img.icons8.com/stickers/50/000000/o.png" class="score-icon" id="O"></img src="https://img.icons8.com/stickers/50/000000/o.png"><h2 id="o-score">0</h2>
+            </div>
         </div>
         <button class="reset-button" onclick="reset()">REINICIAR</button>
     </div>
