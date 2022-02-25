@@ -20,10 +20,10 @@
     <!--link rel="icon" type="image/x-icon" href="02-Images/favicon.svg">-->
     <title>Tic Tac Toe!</title>
 </head>
-<body>
+<body onload="reset()">
     <div class="top-panel">
-        <div class="titular"><h1>¡TIC TAC TOE!</h1></div>
-        <div class="player-turn"><h2>Turno de</h2><img src="/x.svg" class="turn" alt=""></div>
+        <div class="titular"><h1>¡TIC, TAC, TOE!</h1></div>
+        <div id="player-turn"><h2 id="turn-text">Inicia</h2><img src="" class="turn" name="turn"></div>
     </div>
     <div class="content">
         <div class="tictactoe">
@@ -41,13 +41,13 @@
     <div class="bottom-panel">
         <div class="scores">
             <div id="score-x-box">
-                <h2 id="x-score">0</h2><img src="/x.svg" class="score-icon" id="x">
+                <h2 id="x-score">0</h2><img src="x.svg" class="score-icon" id="x">
             </div>
             <div id="score-o-box">
-                <img src="/o.svg" class="score-icon" id="o"><h2 id="o-score">0</h2>
+                <img src="o.svg" class="score-icon" id="o"><h2 id="o-score">0</h2>
             </div>
         </div>
-        <button class="reset-button" onclick="reset()">REINICIAR</button>
+        <button class="reset-button" onclick="reset()"><img src="" alt=""></button>
     </div>
 </body>
 </html>
