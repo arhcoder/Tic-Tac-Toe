@@ -1,0 +1,51 @@
+.tictactoe
+{
+    width: 34vh;
+    height: 34%;
+    display: grid;
+    gap: 1.4vh;
+    grid-template-columns: repeat(3, 3fr);
+    grid-template-rows: repeat(3, 3fr);
+}
+
+.box-empty
+{
+    width: 100%;
+    background: #203238;
+    border-radius: 14%;
+    cursor: pointer;
+}
+
+.box-clicked
+{
+    width: 100%;
+    background: #2C3E42;
+    border-radius: 14%;
+    cursor: default;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.box-win
+{
+    width: 100%;
+    background: aquamarine;
+    border-radius: 14%;
+    cursor: default;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.icon
+{
+    width: 64%;
+    height: 64%;
+    display: none;
+}
+
+img[src]
+{
+    display: block;
+}

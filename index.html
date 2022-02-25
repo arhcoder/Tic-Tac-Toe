@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <!--| Estilos CSS |-->
+    <link rel="stylesheet" href="/index.css">
+    <link rel="stylesheet" href="/tictactoe.css">
+    <!--| Scripts |-->
+    <script src="tictactoe.js"></script>
+    <!--| Favicon |-->
+    <!--link rel="icon" type="image/x-icon" href="02-Images/favicon.svg">-->
+    <title>Tic Tac Toe!</title>
+</head>
+<body>
+    <div class="top-panel">
+        <div class="titular"><H1>¡TIC TAC TOE!</H1></div>
+        <div class="player"><h2>TURNO DEL JUGADOR: X</h2></div>
+    </div>
+    <div class="content">
+        <div class="tictactoe">
+            <div class="box-empty" id="box1" onclick="playerClick('box1', 'icon1')"><img class="icon" name="icon1"></img></div>
+            <div class="box-empty" id="box2" onclick="playerClick('box2', 'icon2')"><img class="icon" name="icon2"></img></div>
+            <div class="box-empty" id="box3" onclick="playerClick('box3', 'icon3')"><img class="icon" name="icon3"></img></div>
+            <div class="box-empty" id="box4" onclick="playerClick('box4', 'icon4')"><img class="icon" name="icon4"></img></div>
+            <div class="box-empty" id="box5" onclick="playerClick('box5', 'icon5')"><img class="icon" name="icon5"></img></div>
+            <div class="box-empty" id="box6" onclick="playerClick('box6', 'icon6')"><img class="icon" name="icon6"></img></div>
+            <div class="box-empty" id="box7" onclick="playerClick('box7', 'icon7')"><img class="icon" name="icon7"></img></div>
+            <div class="box-empty" id="box8" onclick="playerClick('box8', 'icon8')"><img class="icon" name="icon8"></img></div>
+            <div class="box-empty" id="box9" onclick="playerClick('box9', 'icon9')"><img class="icon" name="icon9"></img></div>
+        </div>
+    </div>
+    <div class="bottom-panel">
+        <div class="score">
+            <div class="scores"><h2>X: 10</h2><br><h2>O: 8</h2></div>
+        </div>
+        <button class="reset-button" onclick="reset()">REINICIAR</button>
+    </div>
+</body>
+</html>

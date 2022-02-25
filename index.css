@@ -1,0 +1,101 @@
+*
+{
+    margin: 0;
+    padding: 0;
+}
+
+body
+{
+    width: 100vw;
+    height: 100vh;
+    background: #141E28
+}
+
+.top-panel
+{
+    width: 100%;
+    height: 28%;
+    position: fixed;
+    top: 0px !important;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    align-items: center;
+}
+
+.titular
+{
+    width: 34vh;
+    height: 24%;
+    margin: 2%;
+    border-radius: 14px;
+    text-align: center;
+}
+
+.player
+{
+    width: 34vh;
+    height: 20%;
+    margin: 2%;
+    background: #203238;
+    border-radius: 14px;
+    text-align: center;
+    text-align: start;
+}
+
+.bottom-panel
+{
+    width: 100%;
+    height: 28%;
+    position: fixed;
+    bottom: 0px !important;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+.scores
+{
+    width: 34vh;
+    height: 80%;
+    margin: 2%;
+    background: #203238;
+    border-radius: 14px;
+    text-align: center;
+    text-align: start;
+}
+
+.reset-button
+{
+    margin: 2%;
+    padding: 1.6% 1.8%;
+    border-radius: 14px;
+    font-size: 16px;
+    font-weight: 800;
+    color: #FFF;
+    background-color: crimson;
+    border: 2px solid crimson;
+    cursor: pointer;
+    transition: 0.25s ease;
+}
+
+.reset-button:hover
+{
+    box-shadow: 0 6px 18px 0 rgba(#FFF, 0.1);
+    color: crimson;
+    border-color: transparent;
+    background-color: transparent;
+}
+
+.content
+{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
