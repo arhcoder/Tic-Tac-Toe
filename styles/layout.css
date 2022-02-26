@@ -54,7 +54,7 @@ body
 {
     margin-left: 1vh;
     font-family: "Rubik", sans-serif;
-    font-size: 2.88vh;
+    font-size: 2.44vh;
     font-weight: 300;
     color: #BBC;
 }
@@ -63,6 +63,16 @@ body
     width: 4vh;
     height: 4vh;
     margin-left: 0.44vh;
+}
+
+.content
+{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
 }
 
 .bottom-panel
@@ -94,12 +104,24 @@ body
     display: flex;
     justify-content: flex-end;
     align-items: center;
+    background: #203238;
+    border-color: #203238;
+    border-width: 2.22vh 0 2.22vh 2.22vh;
+    margin: -2.22vh 0 -2.22vh -2.22vh;
+    border-radius: 14px 0 0 14px;
+    border-style: solid;
 }
 #score-o-box
 {
     display: flex;
     justify-content: flex-start;
     align-items: center;
+    background: #203238;
+    border-color: #203238;
+    border-width: 2.22vh 2.22vh 2.22vh 0;
+    margin: -2.22vh -2.22vh -2.22vh 0;
+    border-radius: 0 14px 14px 0;
+    border-style: solid;
 }
 .score-icon
 {
@@ -108,7 +130,7 @@ body
 }
 #x
 {
-    margin: 0 2.88vh 0 0.44vh;
+    margin: 0 2.44vh 0 0.55vh;
 }
 #o
 {
@@ -117,39 +139,56 @@ body
 .scores h2
 {
     font-family: "Rubik", sans-serif;
-    font-size: 2.8vh;
+    font-size: 2.44vh;
     font-weight: 300;
     color: #BBC;
 }
 
 .reset-button
 {
-    padding: 2vh;
-    margin-top: 4vh;
-    border-radius: 14px;
-    font-size: 16px;
-    font-weight: 800;
-    color: #FFF;
-    background-color: crimson;
-    border: 2px solid crimson;
+    padding: 1.76vh;
+    margin-top: 4.44vh;
+    border-radius: 100%;
+    background-color: #08A818;
+    border: 2px solid #08A818;
     cursor: pointer;
-    transition: 0.25s ease;
+    transition: 0.68s ease;
+    box-shadow: 0 0 1.44vh #08A818;
+    -webkit-tap-highlight-color: transparent;
 }
 
-.reset-button:hover
+.reset-button:active
 {
-    box-shadow: 0 6px 18px 0 rgba(#FFF, 0.1);
-    color: crimson;
+    transform: translateY(0.66vh);
     border-color: transparent;
     background-color: transparent;
+    box-shadow: 0 0 2.88vh #08A818;
+    transition: 0.14s ease;
 }
 
-.content
+.reset-button:not(:active)
 {
-    width: 100%;
-    height: 100%;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
+    animation-name: spin;
+    animation-duration: 0.2s;
+    animation-iteration-count: 1;
+    animation-timing-function: linear;
+    transition: 0.2s step-end;
+}
+
+@keyframes spin
+{
+    from
+    {
+        transform:rotate(0deg);
+    }
+    to
+    {
+        transform:rotate(360deg);
+    }
+}
+
+.reset-icon
+{
+    width: 2.88vh;
+    height: 2.88vh;
 }

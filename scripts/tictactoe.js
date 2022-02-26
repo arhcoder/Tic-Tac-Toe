@@ -24,7 +24,7 @@ var scoreGived = false;
 function playerClick(clicked_class, clicked_id)
 {
     // Si la caja clickeada está vacía.
-    if (document.getElementById(clicked_class).className == "box-empty" && gameOver == false)
+    if (document.getElementById(clicked_class).className == "box-empty" && !gameOver)
     {
         // Se dibuja el ícono de "X" o "O", según el turno.
         if (playerOneTurn)
@@ -46,15 +46,15 @@ function playerClick(clicked_class, clicked_id)
         
         // Se actualiza el estado del botón a "clickeado".
         document.getElementById(clicked_class).className = "box-clicked";
+
+        // Se agrega el tiro al vector del tablero.
+        var index = clicked_id.substr(clicked_id.length - 1);
+        BOARD[parseInt(index - 1)] = currentPlayer;
+
+        // Cambia de turno.
+        document.getElementById("turn-text").innerHTML = "Turno de";
+        validate();
     }
-
-    // Se agrega el tiro al vector del tablero.
-    var index = clicked_id.substr(clicked_id.length - 1);
-    BOARD[parseInt(index - 1)] = currentPlayer;
-
-    // Cambia de turno.
-    document.getElementById("turn-text").innerHTML = "Turno de";
-    validate();
 }
 
 function validate()
@@ -86,12 +86,16 @@ function validate()
         {
             var box = winningBox[j];
             document.getElementById("box" + (box + 1)).className = "box-win";
+            document.querySelector("img[name=icon" + (box + 1) + "]").src = "svg/" + currentPlayer.toString() + "-win.svg";
         }
 
         // Se actualizan los marcadores.
         document.getElementById("turn-text").innerHTML = "Ganador: ";
         document.querySelector("img[name=turn]").src = "svg/" + currentPlayer.toString() + ".svg";
         document.getElementById("player-turn").style.justifyContent = "center";
+        document.getElementById("player-turn").style.background = "#2C404C";
+        document.getElementById("score-" + (currentPlayer) + "-box").style.background = "#2C404C";
+        document.getElementById("score-" + (currentPlayer) + "-box").style.borderColor = "#2C404C";
         if (currentPlayer == "x" && !scoreGived) xScore++;
         document.getElementById("x-score").innerHTML = xScore;
         if (currentPlayer == "o" && !scoreGived) oScore++;
@@ -126,6 +130,7 @@ function reset()
         playerOneTurn = false;
         document.querySelector("img[name=turn]").src = "svg/o.svg";
     }
+    
     document.getElementById("turn-text").innerHTML = "Inicia";
 
     // Limia las casillas del tablero.
@@ -139,6 +144,9 @@ function reset()
     BOARD = ["", "", "", "", "", "", "", "", ""];
     document.getElementById("player-turn").style.justifyContent = "flex-start";
     document.getElementById("turn-text").style.marginLeft = "1vh";
+    document.getElementById("player-turn").style.background = "#203238";
+    document.getElementById("score-" + (currentPlayer) + "-box").style.background = "#203238";
+    document.getElementById("score-" + (currentPlayer) + "-box").style.borderColor = "#203238";
     scoreGived = false;
     gameOver = false;
 }

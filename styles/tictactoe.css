@@ -2,6 +2,7 @@
 {
     width: 34vh;
     height: 34%;
+    
     display: grid;
     gap: 1.4vh;
     grid-template-columns: repeat(3, 3fr);
@@ -30,7 +31,7 @@
 .box-win
 {
     width: 100%;
-    background: #6F9098;
+    background: #2C404C;
     border-radius: 14%;
     cursor: default;
     display: flex;
