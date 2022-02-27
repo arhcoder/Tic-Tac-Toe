@@ -30,16 +30,16 @@ function playerClick(clicked_class, clicked_id)
         if (playerOneTurn)
         {
             // Se dibuja la imágen X y se cambia de turno.
-            document.querySelector("img[name=" + clicked_id + "]").src = "x.svg";
-            document.querySelector("img[name=turn]").src = "o.svg";
+            document.querySelector("img[name=" + clicked_id + "]").src = "svg/x.svg";
+            document.querySelector("img[name=turn]").src = "svg/o.svg";
             playerOneTurn = !playerOneTurn;
             currentPlayer = "x";
         }
         else
         {
             // Se dibuja la imágen O y se cambia de turno.
-            document.querySelector("img[name=" + clicked_id + "]").src = "o.svg";
-            document.querySelector("img[name=turn]").src = "x.svg";
+            document.querySelector("img[name=" + clicked_id + "]").src = "svg/o.svg";
+            document.querySelector("img[name=turn]").src = "svg/x.svg";
             playerOneTurn = !playerOneTurn;
             currentPlayer = "o";
         }
@@ -90,7 +90,7 @@ function validate()
 
         // Se actualizan los marcadores.
         document.getElementById("turn-text").innerHTML = "Ganador: ";
-        document.querySelector("img[name=turn]").src = currentPlayer + ".svg";
+        document.querySelector("img[name=turn]").src = "svg/" + currentPlayer.toString() + ".svg";
         document.getElementById("player-turn").style.justifyContent = "center";
         if (currentPlayer == "x" && !scoreGived) xScore++;
         document.getElementById("x-score").innerHTML = xScore;
@@ -106,7 +106,7 @@ function validate()
     {
         document.getElementById("turn-text").innerHTML = "¡Empate!";
         document.getElementById("turn-text").style.marginLeft = "3.44vh";
-        document.querySelector("img[name=turn]").src = "void.svg";
+        document.querySelector("img[name=turn]").src = "svg/void.svg";
         document.getElementById("player-turn").style.justifyContent = "center";
     }
 }
@@ -119,12 +119,12 @@ function reset()
     if (randomInt == 1)
     {
         playerOneTurn = true;
-        document.querySelector("img[name=turn]").src = "x.svg";
+        document.querySelector("img[name=turn]").src = "svg/x.svg";
     }
     else
     {
         playerOneTurn = false;
-        document.querySelector("img[name=turn]").src = "o.svg";
+        document.querySelector("img[name=turn]").src = "svg/o.svg";
     }
     document.getElementById("turn-text").innerHTML = "Inicia";
 
@@ -132,7 +132,7 @@ function reset()
     for (let i = 1; i <= 9; i++)
     {
         document.getElementById("box" + i).className = "box-empty";
-        document.querySelector("img[name=icon" + i  + "]").src = "void.svg";
+        document.querySelector("img[name=icon" + i  + "]").src = "svg/void.svg";
     }
 
     // Actualiza el tablero //
